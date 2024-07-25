@@ -1,0 +1,144 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 7px;
+    background: #fff;
+    width: 600px;
+    padding-bottom: 5px;
+    box-sizing: border-box; 
+    align-items: center; 
+    justify-content: center; 
+    max-height: 100vh; 
+    overflow: auto; 
+}
+
+.Header {
+    margin-bottom: 20px; 
+}
+
+.Text {
+    color: rgb(5, 46, 70);
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center; 
+}
+
+.Underline {
+    width: 61px;
+    height: 6px;
+    background: rgb(5, 46, 70);
+    border-radius: 9px;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+    margin-top: 10px; 
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 480px;
+    height: 45px;
+    background: #eaeaea;
+    border-radius: 6px;
+    padding-left: 20px; 
+}
+
+.input img {
+    margin-right: 10px; 
+}
+
+.input input, .input select {
+    width: 100%; 
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #797979;
+    font-size: 19px;
+    text-align: left; 
+    padding-left: 10px; 
+}
+
+.input input::placeholder, .input select::placeholder {
+    text-align: left; 
+    color: #797979;
+}
+
+.input input:focus, .input select:focus {
+    outline: none; 
+}
+
+.input select {
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-align-last: center; 
+}
+
+.forgot-password {
+    align-self: flex-start; 
+    margin-top: 5px; 
+    margin-bottom: 5px; 
+    color: #797979;
+    font-size: 18px;
+    padding-left: 0; 
+}
+
+.forgot-password span {
+    color: rgb(5, 46, 70);
+    cursor: pointer;
+}
+
+.account-change {
+    margin-top: 15px; 
+    margin-bottom: 10px; 
+    font-size: 18px;
+    text-align: center; 
+}
+
+.account-change span {
+    color: rgb(5, 46, 70);
+    cursor: pointer;
+    text-decoration: underline; 
+}
+
+.submit-container {
+    margin-top: 10px; 
+    margin-bottom: 20px; 
+}
+
+.submit, .gray {
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 50px; 
+    color: #fff;
+    background: rgb(5, 46, 70);
+    border-radius: 50px;
+    font-size: 19px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex; 
+}
+
+.submit:hover, .gray:hover {
+    opacity: 0.9;
+}
+
+.gray {
+    background: #EAEAEA;
+    color: #676767;
+}
+
+.error-message {
+    color: red;
+    margin: 10px 0;
+    text-align: center;
+    font-size: 14px;
+}

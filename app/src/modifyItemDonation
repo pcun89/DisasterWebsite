@@ -1,0 +1,34 @@
+from flask import Flask, jsonify, request
+from flask_sqlalchemy import SQLAlchemy
+
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:Bakugan1234!@#$@localhost:3306/dbname'
+db = SQLAlchemy(app)
+
+class DonationItem(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    donationDescription = db.Column(db.String(500))
+    amount = db.Column(db.Integer)  # Add this line
+
+@app.route('/donate', methods=['GET'])
+def fetch_donation_items():
+    donation_items = DonationItem.query.all()
+    return jsonify([item.serialize for item in donation_items])
+
+@app.route('/donate/<int:id>', methods=['PUT'])
+def edit_donation_item(id):  
+    item = DonationItem.query.get_or_404(id)
+    item.donationDescription = request.json.get('donationDescription', item.donationDescription)
+    item.amount = request.json.get('amount', item.amount)
+    db.session.commit()
+    return jsonify(item.serialize), 200
+
+@app.route('/donate/<int:id>', methods=['DELETE'])
+def delete_donation_item(id):
+    item = DonationItem.query.get_or_404(id)
+    db.session.delete(item)
+    db.session.commit()
+    return '', 204
+
+if __name__ == '__main__':
+    app.run(debug=True)

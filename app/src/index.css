@@ -1,0 +1,47 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  padding: 20px;
+}
+
+.box {
+  background-color: white;
+  border: 2px solid #007bff;
+  margin: 10px;
+  padding: 20px;
+  flex-basis: calc(50% - 40px); /* Adjusted for two boxes per row */
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: transform 0.2s; /* Animation on hover */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 150px; /* Fixed height for consistency */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Adding some shadow for depth */
+}
+
+.box:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.hidden {
+  display: none;
+}
+
+/* Responsive layout adjustments */
+@media (max-width: 768px) {
+  .box {
+    flex-basis: calc(100% - 40px); /* Full width for smaller screens */
+  }
+}

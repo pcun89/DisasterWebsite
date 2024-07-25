@@ -1,0 +1,34 @@
+body {
+  margin: auto;
+}
+
+.navTitle {
+  font-size: 1.7em;
+  font-weight: bolder;
+}
+
+.navPanel {
+  background-color: rgb(5, 46, 70, 0.5);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.3em;
+}
+
+.navPanel ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navPanel ul li {
+  display: inline;
+  margin-right: .875em;
+}
+
+.navPanel ul li a {
+  color: white;
+  text-decoration: none;
+}
+  
